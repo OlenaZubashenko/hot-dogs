@@ -19,7 +19,6 @@ export const Card: React.FC<Props> = ({ good }) => {
       <span className='Card__price'>{price}</span>
       <button type='button' className='edit__btn'>Edit</button>
     </li>
-
   )
 }
 

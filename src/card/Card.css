@@ -1,0 +1,55 @@
+.Card__item {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgba(194, 192, 192, 0.5);
+    width: 220px;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.Card__img {
+    display: flex;
+    width: 215px;
+    height: 215px;
+    transition: transform 0.3s;
+    border-radius: 5%;
+    margin: 0 auto ;
+}
+.Card__img:hover {
+transform: scale(1.1);
+}
+
+.Card__title {
+    color: rgb(143, 138, 138);
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.Card__description {
+    color: rgb(143, 138, 138);
+    font-size: 14px;
+}
+
+.edit__btn {
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+color: rgb(100, 98, 98);
+font-size: 15px;
+font-weight: 600;
+background: #ffffff;
+border-radius: 6px;
+border: 1px solid rgb(233, 231, 231);
+transition: color 0.3s, background-color 0.3s;
+}
+
+.edit__btn:hover {
+    color: rgb(250, 246, 246);
+background-color: rgb(148, 146, 146);
+}
+
+.Card__price {
+    color: rgb(100, 98, 98);
+    font-size: 20px;
+    margin-bottom: 10px;
+}

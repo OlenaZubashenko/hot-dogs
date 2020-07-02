@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Card } from './card/Card';
+import { goods } from './api/goods';
+
+
+
 import './App.css';
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App__header">
+        <div className='wrapper'>
+        <button
+         type='button'
+         className='header__btn'
+         > Add hot-dog </button>
+        </div>
+        
       </header>
+      <ul className="Card__list">
+        {goods.map((good: IGood) => <Card good={good} />)}
+      </ul>
+
     </div>
   );
 }

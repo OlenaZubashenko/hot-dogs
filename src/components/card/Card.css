@@ -30,7 +30,7 @@ transform: scale(1.1);
     font-size: 14px;
 }
 
-.edit__btn {
+.Card__btn {
     cursor: pointer;
     padding: 10px;
     outline: none;
@@ -43,7 +43,7 @@ border: 1px solid rgb(233, 231, 231);
 transition: color 0.3s, background-color 0.3s;
 }
 
-.edit__btn:hover {
+.Card__btn:hover {
     color: rgb(250, 246, 246);
 background-color: rgb(148, 146, 146);
 }
@@ -52,4 +52,9 @@ background-color: rgb(148, 146, 146);
     color: rgb(100, 98, 98);
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.Card-btn__wrapper {
+    display: flex;
+    justify-content: space-between;
 }

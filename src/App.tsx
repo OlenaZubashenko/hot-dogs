@@ -1,29 +1,38 @@
 import React from 'react';
-import { Card } from './card/Card';
+import { CardList } from './components/cardList/CardList';
 import { goods } from './api/goods';
-
-
-
 import './App.css';
 
-function App() {
+const goodsFromAPI = [...goods];
+
+function App(this: any) {
+
+  //part with onDeleted will be done with useState()
+  const state = {
+  goods: goodsFromAPI
+}
 
 
+ let onDeleted = (id: any) => {
+  this.setState((prevState: { goods: any[]; }) => ({
+    goods: prevState.goods.filter((el: { id: any; }) => el.id != id)
+  }));
+};
   return (
     <div className="App">
       <header className="App__header">
         <div className='wrapper'>
-        <button
-         type='button'
-         className='header__btn'
-         > Add hot-dog </button>
+          <button
+            type='button'
+            className='header__btn'
+          > Add hot-dog </button>
         </div>
-        
-      </header>
-      <ul className="Card__list">
-        {goods.map((good: IGood) => <Card good={good} />)}
-      </ul>
 
+      </header>
+      <CardList 
+            goods={goodsFromAPI}
+            onGoodDeleted ={onDeleted}
+            />
     </div>
   );
 }
